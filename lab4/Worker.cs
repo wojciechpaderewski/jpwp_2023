@@ -7,7 +7,7 @@ abstract class Worker
 
     protected int job = 0;
 
-    protected string [] hash = { "ksiegowa 150", "kierownik 200", "pracownik 100" };
+    protected string [] hash = { "ksiegowa 25", "kierownik 50", "pracownik 20" };
 
 
     public Worker(string name, int surname, JobPosition jobPosition)
@@ -15,6 +15,14 @@ abstract class Worker
         this.name = name;
         this.surname = surname;
         this.jobPosition = jobPosition;
+    }
+
+    public virtual void printInfo () {
+        Console.WriteLine("Name: " + name + " Surname: " + surname);
+        Console.WriteLine("Job: " + job);
+        Console.WriteLine("Job position: " + jobPosition);
+        Console.WriteLine("Salery: " + calcSalery());
+        Console.WriteLine("Holiday: " + calcHoliday());
     }
 
     public int calcHoliday () {
@@ -27,5 +35,5 @@ abstract class Worker
         }
     }
 
-    abstract public void calcSalery (); 
+    abstract public float calcSalery (); 
 }
