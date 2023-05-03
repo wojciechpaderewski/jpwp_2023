@@ -13,7 +13,6 @@ class Drawer extends Canvas {
         super();
         setBackground(java.awt.Color.lightGray);
         setSize(500, 300);
-        System.setProperty("sun.awt.noerasebackground", "true");
     }
 
     @Override
