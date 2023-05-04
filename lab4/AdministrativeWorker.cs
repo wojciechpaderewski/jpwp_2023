@@ -1,8 +1,8 @@
 class AdministrativeWorker : Worker {
-    public AdministrativeWorker(string name, int surname, JobPosition jobPosition) : base(name, surname, jobPosition) {}
+    public AdministrativeWorker(string name, string surname, JobPosition jobPosition) : base(name, surname, jobPosition) {}
 
     public override float calcSalery () {
-        if (jobPosition != JobPosition.Bookkeeper) {
+        if (jobPosition != JobPosition.Bookkeeper && jobPosition != JobPosition.Manager) {
             Console.WriteLine("Wrong job position");
             return 0;
         }

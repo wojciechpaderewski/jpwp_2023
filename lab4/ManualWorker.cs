@@ -1,5 +1,5 @@
 class ManualWorker : Worker {
-    ManualWorker(string name, int surname, JobPosition jobPosition) : base(name, surname, jobPosition) {}
+    public ManualWorker(string name, string surname, JobPosition jobPosition) : base(name, surname, jobPosition) {}
 
     public override void printInfo () {
         Console.WriteLine("Hello from ManualWorker");

@@ -1,16 +1,16 @@
 abstract class Worker
 {
     protected string name;
-    protected int surname;
+    protected string surname;
 
     protected JobPosition jobPosition;
 
-    protected int job = 0;
+    protected int job = new Random().Next(100, 200);
 
     protected string [] hash = { "ksiegowa 25", "kierownik 50", "pracownik 20" };
 
 
-    public Worker(string name, int surname, JobPosition jobPosition)
+    public Worker(string name, string surname, JobPosition jobPosition)
     {
         this.name = name;
         this.surname = surname;
